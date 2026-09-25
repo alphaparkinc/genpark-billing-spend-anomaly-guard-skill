@@ -1,0 +1,41 @@
+{
+  "name": "genpark-billing-spend-anomaly-guard-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Real-time spend clarity anomaly detector identifying runaway agent token burn spikes with statistical Z-scores inspired by Metronome and Fly.io.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "billing-intelligence",
+  "tags": [
+    "spend-clarity",
+    "billing-anomaly",
+    "runaway-tokens",
+    "circuit-breaker",
+    "metronome"
+  ],
+  "inputs": {
+    "customer_id": {
+      "type": "string",
+      "default": "cust_hubspot_enterprise_04"
+    },
+    "current_hour_spend_usd": {
+      "type": "number",
+      "default": 845.2
+    }
+  },
+  "outputs": {
+    "anomaly_check_id": {
+      "type": "string"
+    },
+    "anomaly_detected": {
+      "type": "boolean"
+    },
+    "severity_level": {
+      "type": "string"
+    },
+    "recommended_guard_action": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
